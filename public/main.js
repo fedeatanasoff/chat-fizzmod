@@ -2,7 +2,7 @@ const form = document.querySelector("form");
 const input = document.querySelector(".input");
 const messages = document.querySelector(".messages");
 const usuarios = document.getElementById("usuarios");
-const username = prompt("Please enter a nickname: ", "");
+const username = prompt("ingrese un nombre de usuario: ", "");
 const socket = io();
 
 form.addEventListener(
@@ -71,6 +71,7 @@ socket.on("deja_chat", function(data) {
 addMessage(
   `<i class="fas fa-long-arrow-alt-right text-success"></i>&nbsp; has ingresado al chat como: ${username}`
 );
+
 socket.emit("ingresa", username);
 
 function addMessage(message) {
