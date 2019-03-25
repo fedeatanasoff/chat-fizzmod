@@ -47,4 +47,4 @@ io.on("connection", function(socket) {
   });
 });
 
-http.listen(8080, () => console.log("escuchando desde puerto 8080"));
+http.listen(8000, () => console.log("Servidor corriendo en el puerto 8000"));
